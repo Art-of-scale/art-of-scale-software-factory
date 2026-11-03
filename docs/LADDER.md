@@ -2,21 +2,22 @@
 
 Each level adds one capability and one control. You never need to read code. Your role moves up: asker → product owner → tester → release approver.
 
-| Zone | Level | Name | What it adds | Your role |
-|---|---|---|---|---|
-| Try | L0 | Prompt app | One HTML file from a chat | Asker |
-| Try | L1 | Hosted app builder | Live address; code in GitHub | Describer, tester |
-| **Founder factory** | **L2** | **Starter factory** (Lab 9) | Cloud coding agent + repo + database + auto-deploy; AGENTS.md + CLAUDE.md + Coding Coach | Product owner |
-| Founder factory | L3 | Intent-first | Grill-me contract (Given / When / Then) → agent's spec → plan for every change; session rituals | Approves the contract |
-| Founder factory | L4 | Self-checking | Tests written first from the acceptance criteria; risk tier sets the proof; fresh-context AI review for Medium+ changes; circuit breaker; preview links | Checks the evidence |
-| Founder factory | **L5** | **Governed, production-ready** (SHIFTCS) | Branch + pull request + AI review + your merge; first-time-user test for High changes; protected main; CI; migrations; login + row level security; backups; alerts; system map current | Release approver |
-| Engineer-led | L6 | Team factory | Several apps; shared company skills; parallel agents; staff contribute | Portfolio owner (with a technical steward) |
-| Engineer-led | L7 | CI-gated | Tests and AI review in CI block bad merges; staging; security scans | Sets the bar |
-| Engineer-led | L8 | Spec-driven | You write specs + acceptance tests; separate builder / tester / reviewer agents | Product manager |
-| Frontier | L9 | Closed loop | Agents run continuously: events start work, a router hands tasks to workers, a watchdog checks real progress; agents deploy, triage, roll back; metric breaches create the next intent | Governor; spends attention only on decisions |
-| Frontier | L10 | Dark factory | Spec in, software out, no human code review. Field reports show these collapse after 3–6 months when no human understands the code. | Sets intent, judges outcomes |
+Four stages: **Try** (L0–1), **Build** (L2–4), **Run** (L5, the graduation), **Scale with engineers** (L6–9). **Claim the lowest:** score Make (how work is built and proved), Run (does the app stay up and recover) and Govern (who may change what). Your level is the lowest of the three.
 
-**Safe ceiling for a non-technical founder working alone: L5.** L6+ needs a technical steward or engineering team.
+| Stage | Level | What you add | Your role | Safe for |
+|---|---|---|---|---|
+| Try | L0 Prompt app | One page from one prompt | Asker | Class 0 demo |
+| Try | L1 Hosted app | A hosted builder (Lovable); a live address; code in your GitHub | Describer | Class 0 |
+| Build | **L2 Starter factory** (Lab 9) | This factory: cloud agent on your repo, database, auto-deploy, rules and memory, key guard, build check, status board, the Coach | Product owner | Class 0 (made-up data) |
+| Build | L3 Intent-first | Every change starts as a contract you approve (Given / When / Then); plan before edit; "Show me" proof | Contract approver | Class 0 |
+| Build | L4 Self-checking | Protected acceptance tests written before the build and re-run on every change; a fresh reviewer for Medium and High changes; a branch and preview per change, merged by you | Evidence reader | Class 0 pilots |
+| **Run** | **L5 Governed** (SHIFTAI Coding Sprint) | Pull requests with an independent AI reviewer; protected main; login and row level security; backups, rollback, alerts; engineer check before go-live | **Release approver** | **Class 1** (real data, bounded) |
+| Scale | L6 Gated | Automatic gates block bad changes; staging; scans | Bar-setter (engineer installs) | Class 2 |
+| Scale | L7 Team | Shared company skills; staff contribute through the gates | Portfolio owner | Class 2 at volume |
+| Scale | L8 Spec-driven | Separate builder, tester and reviewer, on different vendors | Product manager | Class 2, faster |
+| Scale | L9 Owned platform | A named platform owner; agents do chores on events, within limits | Product leader | Class 3 |
+
+**L5 is the graduation, not a ceiling.** It is the first level safe for real data. L6 and up need an engineer. There is no "dark factory" level: factories where nobody understands the code break after a few months.
 
 ## Entry tests (all must be yes)
 - **L2:** a change goes live within ~5 min · the app reads and writes its database · the agent reaches one repo only · only the public key is in Vercel · AGENTS.md, CLAUDE.md and the Coding Coach are in the repo.
