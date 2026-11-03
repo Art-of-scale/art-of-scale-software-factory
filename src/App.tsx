@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { supabase, supabaseConfigured, supabaseVarSource } from './lib/supabase'
 
+// Art of Scale AI Leverage X-Ray link. Set in V1.4; while empty, the board shows 'Link coming soon'.
+const XRAY_URL = ''
+
 type State = 'ok' | 'wait' | 'fail'
 interface Check { label: string; detail: string; state: State }
 
@@ -51,6 +54,10 @@ export default function App() {
       </ul>
       <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
       <p className="foot">Made-up data only until the Art of Scale Production-Ready Gate. Art of Scale.</p>
+      <aside className="cta">
+        <b>Avoid getting leapfrogged.</b> Know your AI leverage in 10 minutes with the free Art of Scale AI Leverage X-Ray.{' '}
+        {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : <span>Link coming soon.</span>}
+      </aside>
     </main>
   )
 }

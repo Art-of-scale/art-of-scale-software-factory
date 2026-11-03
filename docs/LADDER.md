@@ -13,7 +13,7 @@ Each level adds one capability and one control. You never need to read code. You
 | Engineer-led | L6 | Team factory | Several apps; shared company skills; parallel agents; staff contribute | Portfolio owner (with a technical steward) |
 | Engineer-led | L7 | CI-gated | Tests and AI review in CI block bad merges; staging; security scans | Sets the bar |
 | Engineer-led | L8 | Spec-driven | You write specs + acceptance tests; separate builder / tester / reviewer agents | Product manager |
-| Frontier | L9 | Closed loop | Agents deploy, triage, roll back; metric breaches create the next intent | Governor |
+| Frontier | L9 | Closed loop | Agents run continuously: events start work, a router hands tasks to workers, a watchdog checks real progress; agents deploy, triage, roll back; metric breaches create the next intent | Governor; spends attention only on decisions |
 | Frontier | L10 | Dark factory | Spec in, software out, no human code review. Field reports show these collapse after 3–6 months when no human understands the code. | Sets intent, judges outcomes |
 
 **Safe ceiling for a non-technical founder working alone: L5.** L6+ needs a technical steward or engineering team.

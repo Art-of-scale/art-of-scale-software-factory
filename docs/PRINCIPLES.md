@@ -15,12 +15,12 @@
 7. **Test like your user.** Click through the live link; report steps + screenshot.
 8. **A mistake made twice becomes a rule.** It goes into AGENTS.md §7.
 9. **Fresh session, clear task.** Circuit breaker: after three failed tries, stop, explain the options, reset.
-10. **You own the decisions; the agent owns the typing.** Say "explain" for plain-English options.
+10. **You own the decisions; the factory protects your attention.** Every task ends done, failed or blocked, never "unknown". Follow at most 3 sessions at once. Say "explain" for plain-English options.
 
 ## 10 Principles of a Software Factory (how you run the system)
 1. **One app, one repo, one owner.**
 2. **The repo is the memory.** Contracts, specs, the system map, decisions and the changelog live in `docs/`.
-3. **The factory carries the method, not your head.** AGENTS.md, skills, background guards, the Coding Coach.
+3. **The factory carries the method, not your head, and not your vendor.** AGENTS.md, skills, background guards, the Coding Coach: plain files any good agent can run. Own your factory; rent your model.
 4. **Least access.** One repo, one lab database, public key only.
 5. **Secrets never in code or chat.**
 6. **Made-up data until the gate.**
