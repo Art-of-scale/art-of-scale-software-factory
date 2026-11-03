@@ -21,7 +21,7 @@ description: Check the factory's level on the Art of Scale Software Factory Ladd
 - **Test first from now on:** for each new change, write the tests from the acceptance criteria, show that they fail, then build until they pass.
 - Add to AGENTS.md §3: "Run `npm run build` and `npm test` before reporting any task complete, and paste the result. If a test fails, fix the code, not the test."
 - Ask the Owner to check Vercel creates a Preview link for each branch (it does by default) and to test on it.
-- Optional: copy `.claude/hooks/stop-check.example.json` into `.claude/settings.json` hooks so the build must pass before a turn ends (explain first).
+- The build check (Stop hook) is already on from Level 2. At Level 4 it also runs the tests, once `npm test` exists.
 
 ## Recipe: install Level 5 (governed, production-ready)
 Owner clicks (guide step by step):

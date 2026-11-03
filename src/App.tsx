@@ -43,7 +43,7 @@ export default function App() {
   return (
     <main className="wrap">
       <p className="kicker">ART OF SCALE SOFTWARE FACTORY</p>
-      <h1>{allOk ? 'Done. Your first repo is live, and your software factory is live.' : 'Your software factory is loading'}</h1>
+      <h1>{allOk ? 'Factory ready. Your first repo is live, and your software factory is live.' : 'Your software factory is loading'}</h1>
       <ul className="board">
         {checks.map((c) => (
           <li key={c.label} className={c.state}>
@@ -53,7 +53,7 @@ export default function App() {
         ))}
       </ul>
       <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
-      <p className="foot">Made-up data only until the Art of Scale Production-Ready Gate. Art of Scale.</p>
+      <p className="foot"><b>Factory ready</b> means the guards and checks work. Your app is a <b>Class 0 app</b>: made-up data only. It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
         <b>Avoid getting leapfrogged.</b> Know your AI leverage in 10 minutes with the free Art of Scale AI Leverage X-Ray.{' '}
         {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : <span>Link coming soon.</span>}

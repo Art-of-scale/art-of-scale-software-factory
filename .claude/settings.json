@@ -8,7 +8,10 @@
       "Bash(git push -f*)",
       "Bash(git push * --force*)",
       "Bash(git push * -f*)",
-      "Bash(git reset --hard*)"
+      "Bash(git reset --hard*)",
+      "Bash(printenv*)",
+      "Bash(cat .env*)",
+      "Bash(vercel env pull*)"
     ]
   },
   "hooks": {
@@ -39,7 +42,16 @@
         "hooks": [
           {
             "type": "command",
-            "command": "f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/write-guard.py\"; if [ -f \"$f\" ] && command -v python3 >/dev/null 2>&1; then python3 \"$f\"; else exit 0; fi"
+            "command": "f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/write-guard.py\"; if [ -f \"$f\" ] && command -v python3 >/dev/null 2>&1; then python3 \"$f\"; else echo \"Guards: OFF. The key guard cannot run, so this action is blocked. Tell the Owner.\" >&2; exit 2; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/bash-guard.py\"; if [ -f \"$f\" ] && command -v python3 >/dev/null 2>&1; then python3 \"$f\"; else echo \"Guards: OFF. The key guard cannot run, so this action is blocked. Tell the Owner.\" >&2; exit 2; fi"
           }
         ]
       }
@@ -51,6 +63,16 @@
           {
             "type": "command",
             "command": "f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/honesty-check.py\"; if [ -f \"$f\" ] && command -v python3 >/dev/null 2>&1; then python3 \"$f\"; else exit 0; fi"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/build-check.sh\""
           }
         ]
       }

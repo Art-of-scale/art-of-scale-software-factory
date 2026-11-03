@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """PreToolUse hook for Write/Edit/MultiEdit (Art of Scale Software Factory).
-Blocks writing .env files or secret keys into the repo. Fails open on any error."""
+Blocks writing .env files or secret keys into the repo. Fails CLOSED (V1.4): if it cannot check, it blocks."""
 import base64, json, os, re, sys
 
 try:
     data = json.load(sys.stdin)
     tool_input = data.get("tool_input", {}) or {}
-except Exception:
-    sys.exit(0)
+except Exception as exc:
+    print(f"Factory key guard could not check this write ({exc}), so it is blocked. Tell the Owner: 'Guard error: the key guard could not run.'", file=sys.stderr)
+    sys.exit(2)
 
 path = tool_input.get("file_path", "") or ""
 name = os.path.basename(path)
