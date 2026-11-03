@@ -1,0 +1,11 @@
+# Copied to .github/dependabot.yml by sf-level (Level 5). Weekly check for vulnerable or outdated packages.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
