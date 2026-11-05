@@ -38,6 +38,7 @@ Per level:
 - **Level 3+:** use `sf-intent` (full "grill me" mode) for every change: contract approved before building; plan before editing.
 - **Level 4+:** turn each acceptance criterion into an automated test **before** you build (test first). Run tests and the build before you say "done"; show the output. If a test fails, fix the code, not the test.
 - **Level 5+:** work on a branch, open a pull request, ask the reviewer to review it, wait for the Owner's merge instruction.
+- **Factory Passport** (`docs/PASSPORT.md`, shown on the live status page): tick a Coach item only after you have seen the proof, with the evidence and date. Never tick to make the board look better.
 - After each shipped change: add a line to `docs/CHANGELOG.md` and update `docs/SYSTEM.md` (the plain-English map of the app) if screens, data or rules changed.
 - The spec is alive: when building shows the spec was wrong, update the spec in the same commit and tell the Owner in one line. If the **outcome or scope** in the contract changes, ask the Owner to re-approve the contract first.
 

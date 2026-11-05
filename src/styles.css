@@ -16,3 +16,18 @@ code { font-family:'JetBrains Mono', monospace; font-size:13px; word-break:break
 .cta { margin-top:28px; background:var(--navy); color:#F4F7FA; border-left:6px solid var(--yellow); border-radius:10px; padding:16px; font-size:15px; }
 .cta b { color:var(--yellow); }
 .cta a { color:var(--navy); background:var(--yellow); font-weight:800; text-decoration:none; border-radius:8px; padding:6px 12px; margin-left:4px; display:inline-block; }
+
+.passport { margin-top:32px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; }
+.passport h2 { margin:4px 0 8px; font-size:24px; font-weight:900; }
+.next-h { margin:8px 0 4px; font-weight:800; }
+.next { margin:0 0 14px; padding-left:22px; }
+.levels { display:grid; gap:8px; }
+.lvl { border:1px solid var(--line); border-radius:10px; padding:4px 12px; }
+.lvl summary { cursor:pointer; display:grid; grid-template-columns:1fr 90px 40px; gap:10px; align-items:center; padding:8px 0; list-style:none; }
+.lvl .ed { font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); white-space:nowrap; }
+.lvl.sprint .ed { color:var(--navy); background:var(--yellow); border-radius:4px; padding:1px 5px; }
+.bar { height:8px; background:var(--line); border-radius:4px; overflow:hidden; } .bar i { display:block; height:100%; background:var(--teal); }
+.cnt { font-family:'JetBrains Mono', monospace; font-size:13px; text-align:right; }
+.lvl ul { list-style:none; padding:0 0 8px; margin:0; display:grid; gap:6px; font-size:15px; }
+.lvl li.ok { color:var(--ink); } .lvl li:not(.ok) { color:var(--muted); }
+@media (max-width:520px) { .lvl summary { grid-template-columns:1fr 40px; } .bar { display:none; } }

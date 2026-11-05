@@ -8,7 +8,8 @@ description: Check the factory's level on the Art of Scale Software Factory Ladd
 1. Read `docs/LADDER.md` and `docs/PROGRESS.md`. Check each entry test for the current and next level. Check facts in the repo yourself (files, tests, settings); ask the Owner only what you cannot see (for example, GitHub settings).
 2. Show a table: test · ✓/✗ · evidence. State the level the factory is at.
 3. Offer to install the next level. Explain in 2 lines what it adds and why it helps the app. On yes, follow the matching recipe. The Owner does the clicks in GitHub, Vercel or Supabase; you do everything in the repo.
-4. Update `docs/PROGRESS.md` (level, date) and AGENTS.md §1 "Current level". Commit.
+4. Update `docs/PROGRESS.md` (level, date) and AGENTS.md §1 "Current level". In `docs/PASSPORT.md`, tick each Coach item you proved, with the evidence and date (machine checks tick themselves). Never tick an item without proof. Commit and push: the Passport on the live status page updates on the next deploy.
+5. Edition: Levels 2–4 are in the free FAW Lab Kit. The Level 5 install (Sprint edition: modules, branch rules, CI, backups, engineer check) comes with the SHIFTAI Coding Sprint. Say this plainly once if the Owner asks for Level 5.
 
 ## Recipe: install Level 3 (intent-first)
 - Confirm `docs/intent/` and `docs/specs/` templates exist. Back-fill a contract and a technical spec for the app's current state (one file each), with Given / When / Then acceptance criteria.

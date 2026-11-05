@@ -60,6 +60,7 @@ Coach note: "Coach: from now on, every push to main goes live in about a minute.
    - **Route B (no connector):** you write the SQL in `supabase/migrations/001_init.sql`; the Owner opens Supabase → SQL Editor → pastes → Run.
 SQL must: create the tables from the spec, enable row level security on every table, add a lab policy that lets the public key read and write (comment: `-- LAB ONLY: replace with per-user policies at Level 5`), and insert 10–20 rows of made-up data.
 Then switch the app from the local array to Supabase. Push. Ask the Owner to refresh the live link and confirm they see the data.
+When the Owner confirms the live link and the Database ✓, tick `l2-live` and `l2-db` in `docs/PASSPORT.md` (with the date), commit and push.
 Never ask for the service_role key or the database password.
 
 ## Stage 7. First feature, with evidence
@@ -71,6 +72,7 @@ Fix what they report. Repeat for story 2 if time allows. One slice per push.
 ## Stage 8. Wrap and level check
 Fill in `docs/SYSTEM.md` (the plain-English map of the app) and show the Owner the "What the app does" paragraph. Run the `sf-wrap` skill. Then check the Level 2 entry tests from `docs/LADDER.md` and show them with ✓ / ✗:
 change live within ~5 min · app reads and writes its database · agent reaches one repo only (ask the Owner) · only the public key in Vercel · AGENTS.md, CLAUDE.md and the Coach in the repo.
+Then ask the Owner to open the live link: the **Factory Passport** on the status page shows their level and the next 3 steps.
 Close with:
 > You now have a starter software factory: your code, your database, your live app, and the Art of Scale Coding Coach in every session.
 > **Build:** version 1 is live. **Repeat:** for your next app, run `/sf-new-project`; same factory, same playbook. **Grow:** you're at Level 2. Say "grill me" for your next feature (Level 3 habit), and run `/sf-level` any time; I can take you to Level 5.

@@ -20,6 +20,42 @@ async function checkDatabase(): Promise<Check> {
   return { label: 'Database', state: 'fail', detail: `Supabase did not answer: ${error.message}` }
 }
 
+const EDITION = { free: 'Free · FAW Lab Kit', sprint: 'SHIFTAI Coding Sprint' } as const
+
+function Passport({ p }: { p: Passport }) {
+  return (
+    <section className="passport" aria-label="Factory Passport">
+      <p className="kicker">FACTORY PASSPORT</p>
+      <h2>Your factory: Level {p.reached} · {p.reachedName}</h2>
+      {p.working ? (
+        <>
+          <p className="next-h">To reach Level {p.working.n} ({p.working.name}):</p>
+          <ol className="next">{p.next.map((s) => <li key={s}>{s}</li>)}</ol>
+        </>
+      ) : <p className="next-h">Level 5 reached. Levels 6 and up need an engineer.</p>}
+      <div className="levels">
+        {p.levels.map((l) => (
+          <details key={l.n} className={`lvl ${l.edition}`} open={p.working?.n === l.n}>
+            <summary>
+              <span><b>L{l.n} {l.name}</b> <span className="ed">{EDITION[l.edition]}</span></span>
+              <span className="bar" aria-label={`${l.done} of ${l.total} done`}><i style={{ width: `${(100 * l.done) / l.total}%` }} /></span>
+              <span className="cnt">{l.done}/{l.total}</span>
+            </summary>
+            <ul>
+              {l.items.map((i) => (
+                <li key={i.id} className={i.done ? 'ok' : ''}>
+                  <span aria-hidden>{i.done ? '✓' : '○'}</span> {i.label} <small>· {i.by === 'machine' ? 'checked by the factory' : 'ticked by your Coach'}</small>
+                </li>
+              ))}
+            </ul>
+          </details>
+        ))}
+      </div>
+      <p className="foot">The Passport updates on every deploy. Machine checks tick themselves; your Coach ticks the rest in <code>docs/PASSPORT.md</code> once it has seen the proof.</p>
+    </section>
+  )
+}
+
 export default function App() {
   const host = window.location.hostname
   const live = host !== 'localhost' && host !== '127.0.0.1'
@@ -52,6 +88,7 @@ export default function App() {
           </li>
         ))}
       </ul>
+      <Passport p={__PASSPORT__} />
       <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
       <p className="foot"><b>Factory ready</b> means the guards and checks work. Your app is a <b>Class 0 app</b>: made-up data only. It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
