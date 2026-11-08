@@ -34,9 +34,9 @@ Two documents per change, with two different owners:
 - **The technical spec** (`docs/specs/NNN-*.md`): data, screens, architecture, slices, and one test per acceptance criterion. **You own it and check it yourself.** Never ask the Owner to approve technical detail.
 
 Per level:
-- **Level 2:** Capture and Shape can be short (the `sf-intent` quick mode). Build in small vertical slices (screen + data + logic together). Push to `main`.
+- **Level 2–3:** Capture and Shape can be short at Level 2 (the `sf-intent` quick mode). Build in small vertical slices (screen + data + logic together). Always push to `main` with `git push origin HEAD:main`, even if the session started on another branch. Never ask the Owner to merge at Level 2–3.
 - **Level 3+:** use `sf-intent` (full "grill me" mode) for every change: contract approved before building; plan before editing.
-- **Level 4+:** turn each acceptance criterion into an automated test **before** you build (test first). Run tests and the build before you say "done"; show the output. If a test fails, fix the code, not the test.
+- **Level 4+:** turn each acceptance criterion into an automated test **before** you build (test first). Run tests and the build before you say "done"; show the output. If a test fails, fix the code, not the test. Each change goes on a branch with a preview link; open the pull request yourself and give the Owner the one link to click Merge.
 - **Level 5+:** work on a branch, open a pull request, ask the reviewer to review it, wait for the Owner's merge instruction.
 - **Factory Passport** (`docs/PASSPORT.md`, shown on the live status page): tick a Coach item only after you have seen the proof, with the evidence and date. Never tick to make the board look better.
 - After each shipped change: add a line to `docs/CHANGELOG.md` and update `docs/SYSTEM.md` (the plain-English map of the app) if screens, data or rules changed.
@@ -61,6 +61,9 @@ Per level:
 - Use the status words exactly: **factory ready** (the guards and checks work) and **Class 0 app** (made-up data). Never call an app "production ready" before the Art of Scale Production-Ready Gate (Level 5).
 - Explain in plain English, short sentences. No jargon without a one-line meaning.
 - Show evidence for "done": build result, test output, what you checked, or the live link. Never "should work".
+- Say **"live"** only when the change is on the live link: the Owner sees it, or Vercel shows the **Production** deployment for that commit as Ready. A Preview deployment or a pushed branch is not live.
+- Claim only the protection the code gives. Before you describe what a key, a policy or a login can or cannot do, read the actual SQL or code, and say it in one plain line.
+- Commit only the files the change needs. Before you push, check the list of changed files; never delete a file the change did not ask for.
 - Keep each change small enough to undo.
 - Use made-up data only, until `docs/PROGRESS.md` says the Production-Ready Gate is passed.
 - Never expect the Owner to read code or diffs. Report in plain English: what changed, how you proved it, trade-offs, follow-ups.
@@ -99,4 +102,6 @@ Skills live in `.claude/skills/<name>/SKILL.md` (before install: `factory-setup/
 `sf-start` launch and setup · `sf-intent` capture a change ("grill me") · `sf-explain` explain or teach anything · `sf-ship` prove and ship · `sf-wrap` end a session · `sf-level` check level and install the next one · `sf-new-project` start your next app · `sf-app-filter` choose what to build · `sf-help` when stuck · `sf-coach` the coaching method.
 
 ## 7. Lessons (a mistake made twice becomes a rule)
+- (V1.7, dry run) A slice was reported "live in about a minute" but only built as a Preview. Say "live" only after the Production deployment is Ready or the Owner sees it.
+- (V1.7, dry run) A lab policy allowed any update while the Coach said it did not. Read the SQL before you describe its protection.
 <!-- Add one line per lesson: date — rule -->

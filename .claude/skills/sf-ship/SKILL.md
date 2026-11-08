@@ -18,7 +18,8 @@ Read the current level from `docs/PROGRESS.md` and the change's risk tier from i
 - Report in plain English: what changed, how you proved it, trade-offs you made, and follow-ups. No code, no diffs.
 
 ## Ship
-- **Level 2–4:** commit with a plain message and push to `main`. Vercel deploys in about a minute. Give the live link.
+- **Level 2–3:** check the list of changed files, commit with a plain message, then `git push origin HEAD:main`. Vercel deploys in about a minute. Ask the Owner to refresh the live link; say "live" only when they see the change (or Vercel shows the Production deployment Ready).
+- **Level 4:** push a branch, open the pull request yourself, give the Owner the preview link and the one Merge link. After the merge, check Production as above.
 - **Level 5+:** push a branch `feat/NNN-<slug>`, open a pull request with: what changed, why (link the spec), evidence, how to test on the preview link. Ask the `reviewer` subagent (fresh context) to review. Fix Important findings. Then ask the Owner: "Review the preview. Shall I merge?" Merge only on their clear yes.
 - Database changes: Level 2–4 may run SQL through the connector on the lab project only. Level 5+: write a migration file in `supabase/migrations/` inside the pull request; apply only after the Owner approves.
 

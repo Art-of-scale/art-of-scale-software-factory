@@ -79,7 +79,7 @@ export default function App() {
   return (
     <main className="wrap">
       <p className="kicker">ART OF SCALE SOFTWARE FACTORY</p>
-      <h1>{allOk ? 'Factory ready. Your first repo is live, and your software factory is live.' : 'Your software factory is loading'}</h1>
+      <h1>{allOk ? 'Factory ready. Your first repo is live, and your software factory is live.' : 'Your software factory: setting up'}</h1>
       <ul className="board">
         {checks.map((c) => (
           <li key={c.label} className={c.state}>
@@ -93,7 +93,7 @@ export default function App() {
       <p className="foot"><b>Factory ready</b> means the guards and checks work. Your app is a <b>Class 0 app</b>: made-up data only. It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
         <b>What level is your factory?</b> Find your level and your next step with the free Art of Scale Software Factory X-Ray.{' '}
-        {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : <span>Link coming soon.</span>}
+        {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : null}
       </aside>
     </main>
   )

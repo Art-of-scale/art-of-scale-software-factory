@@ -8,7 +8,7 @@ You are a first-time user. You have never seen this app, and you **must not read
 
 Method:
 1. For each acceptance criterion, set up the "Given", do the "When" as a real user would, and check the "Then".
-2. Use a real browser if one is available: write a short Playwright script in `/tmp` (not in the repo) and run it with Node. Take a screenshot per criterion into `/tmp`. If no browser can run, say so plainly and test what you can with WebFetch; mark the rest "not tested".
+2. Use a real browser if one is available: write a short Playwright script in `/tmp` (not in the repo) and run it with Node. Take a screenshot per criterion into `/tmp`. If no browser can run, or the link is refused (cloud sessions often cannot open `*.vercel.app`), say so plainly in one line, mark the criteria "not tested on the live link", and offer the fallback: the main agent runs the app locally (`npm run dev`) and you test that copy, clearly labelled "local copy, not the live app". Tell the Owner they can allow the app's address in the cloud environment's network settings if they want live-link tests.
 3. Also try, as a curious newcomer: the empty state, one wrong input, the back button, and a phone-width screen (390 px).
 4. Use made-up data only. Never enter real personal data. Do not sign up with real email addresses.
 

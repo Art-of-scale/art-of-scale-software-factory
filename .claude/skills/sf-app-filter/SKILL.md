@@ -6,7 +6,7 @@ description: Help the Owner choose which app to build (and which not to), and wh
 # Art of Scale App Opportunity Filter
 
 ## Step 0. Build Route (one idea, about 3 minutes)
-Use this when the Owner has one idea and asks "which way should I build [idea]?" or "buy or build?". Ask the 4 questions **one at a time**, each with your suggested answer. **The first yes decides.**
+Use this when the Owner has one idea and asks "which way should I build [idea]?" or "buy or build?". Ask all 4 questions **one at a time**, each with your suggested answer (the later answers feed the red flags). **The first yes decides the route.** If the route differs from one the Owner got earlier, say in one line why.
 | # | Question | If yes |
 |---|---|---|
 | 1 | Does an existing product do this well enough, without giving away your edge? | **Buy** (SaaS or no-code) |

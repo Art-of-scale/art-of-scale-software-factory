@@ -15,4 +15,4 @@
 - **Subagents** (fresh context, so they do not share your blind spots):
   - `reviewer` (`.claude/agents/reviewer.md`) reviews Medium and High changes from Level 4, every pull request at Level 5, and any change when the Owner asks for a second opinion;
   - `user-tester` (`.claude/agents/user-tester.md`) tests High changes like a first-time user, through the link only, with no access to the code. Give it the link and the contract's Given / When / Then lines, nothing else.
-- **Cloud sessions:** you work in a cloud copy of the repo. Push your commits so Vercel can deploy them. At Level 2–4 push to `main` (AGENTS.md §3). If a push to `main` is refused, push a branch and ask the Owner to merge it in GitHub (2 clicks).
+- **Cloud sessions:** you work in a cloud copy of the repo, often on a `claude/…` branch. Run `npm install` first if `node_modules/` is missing. At Level 2–3 push with `git push origin HEAD:main` (AGENTS.md §3) so Vercel deploys Production. If a push to `main` is refused, open the pull request yourself and give the Owner the one link to click Merge. Cloud sessions cannot open `*.vercel.app` links: ask the Owner to check the live link.
