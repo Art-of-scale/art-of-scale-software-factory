@@ -11,7 +11,7 @@ Every new app gets the same factory: its own repo, its own database, the same Co
 2. **Carry the lessons.** Copy this repo's AGENTS.md §7 (Lessons) and `docs/GLOSSARY.md` into a note for the Owner. They go into the new repo after set-up.
 3. **Make the new repo.** Choose the first route that works:
    - **A. Load button (best):** open START-HERE and click **Load my Art of Scale Software Factory** again, or open the Art of Scale Software Factory template on GitHub → **Use this template**. Name it after the new app.
-   - **B. From this repo:** GitHub → New repository (private, empty, named after the app). Then upload the Starter Kit's `upload-to-github` contents as in the lab.
+   - **B. From this repo:** GitHub → New repository (private, empty, named after the app). Then drag in the Start Kit's `factory` folder contents as in the lab.
 4. **Database.** The free Supabase plan allows 2 active projects. If this would be the third, ask the Owner to pause the oldest lab project first (Supabase → project → Settings → Pause). Create a new project for the new app (made-up data first).
 5. **Access.** Claude settings → GitHub: allow the new repo. Keep the agent's access to the repos it needs, no more.
 6. **Open a new session on the new repo** and paste the launch prompt. Tell the Coach: "I'm a returning builder." `sf-start` then skips the explanations, reuses the accounts and goes faster.
