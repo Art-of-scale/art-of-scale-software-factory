@@ -15,11 +15,13 @@ For founders and leaders who don't write code. Part of the Art of Scale Factory 
 2. Choose **GitHub** as the Git provider. Keep the repo **private**. If GitHub asks to install Vercel, allow it (you can narrow it to this one repo later).
 3. When asked, add **Supabase** (a new project, for made-up data only). No credit card is needed.
 4. Click **Deploy**. Open your live link: the status board shows Code, Hosting, Database and Coach.
-5. Open Claude Code (desktop app → Code, or claude.ai/code in a browser) → choose a **cloud** environment → **Connect GitHub**. This takes two steps: **Authorise** the Claude GitHub App, then **Install** it. On the install screen choose **Only select repositories** → `my-software-factory`. Then pick the repo and paste:
+5. Open **claude.ai/code** in your browser (it always runs in the cloud; nothing runs on your computer) → **Connect GitHub**. This takes two steps: **Authorise** the Claude GitHub App, then **Install** it. On the install screen choose **Only select repositories** → `my-software-factory`. Then pick the repo and paste:
 
 > Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.
 
 The first line back must say **"Guards: live"**.
+
+Later, you can also use the Claude desktop app (Code tab, **cloud** environment): it adds an app preview pane and notifications.
 
 No Supabase step in the Vercel flow? After the deploy: Vercel → your project → **Storage** (or Infrastructure → Storage) → **Connect database** → Supabase → Create. Then redeploy.
 
