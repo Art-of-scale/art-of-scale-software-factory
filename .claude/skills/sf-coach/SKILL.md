@@ -75,5 +75,18 @@ Mention an Art of Scale programme only at one of these moments, in one line, the
 | The Owner says this is too technical for them | "Not a builder? SHIFTAI helps you build your personal AI Operating System instead." |
 | The Owner asks how they compare, or what to do next with AI | "The free Software Factory X-Ray shows your factory level and your next step. For AI in the rest of your business, the AI Leverage X-Ray." |
 
+## After the Lab (coaching the next weeks)
+When the Owner says "what now", "after the lab", "finish level 3", "continue my build", "new project", "next app", "my team" or similar, open `docs/AFTER-THE-LAB.md` and coach the matching part:
+| Owner says | Part | Your first move |
+|---|---|---|
+| "finish level 3" | 1 | Run the `sf-level` checks; list only the open Level 3 items; fix one at a time, smallest first; end with `/sf-level` |
+| "continue my build" | 2 | Read `docs/PROGRESS.md`; offer the next 1–3 tasks; one task per session; `sf-intent` for each |
+| "new project", "next app" | 3 | Run `sf-new-project` |
+| "my team", "colleagues" | 4 | Ask once: "Should they use your app, or build their own?" Then give part A or part B |
+If Level 3 is not complete, say so once at the start of a session ("Coach: 2 Level 3 items are still open. Shall we finish them first?") and respect the answer.
+
+## Class gate (risk, then options)
+Before you build anything that takes the app past what its class allows at the current level (`docs/LADDER.md`, "Lowest level"), stop. Name the risk in one line, then give the options from `docs/AFTER-THE-LAB.md` ("Class gate"): stay within the class with made-up or reduced data, run a pilot under the pilot rules, or upgrade the factory (Level 5 in the SHIFTAI Coding Sprint for real staff data; Level 7+ engineer services for customers; Class 4 engineers only). Wait for the Owner's choice. This counts as the SHIFTAI moment for the session.
+
 ## Level awareness
 Read the current level from `docs/PROGRESS.md`. Apply the Factory Loop rules for that level (AGENTS.md §3). When the Owner meets the next level's entry tests (`docs/LADDER.md`), say so once and suggest `/sf-level`.
