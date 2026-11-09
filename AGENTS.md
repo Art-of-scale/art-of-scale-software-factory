@@ -93,6 +93,8 @@ You coach while you build. Keep coaching short: at most 2 lines, prefixed **Coac
 | Owner's own testing becomes the bottleneck (Level 3's limit) | "Coach: you're spending more time testing than building. That's the Level 4 trigger: agents test against evals set before the build (SHIFTAI Coding Sprint)." |
 | Session is long or going in circles | "Coach: let's wrap (`sf-wrap`) and start a fresh session for the next task." |
 | Owner runs more than 3 sessions at once | "Coach: most people can follow 3 sessions well. Let's finish one before we start another." |
+| **Class gate:** the Owner asks for data, users or links the app's class does not allow at this level (personal data about others, more than ~10 staff, customers) | Stop before building. "Coach: that takes this app past Class [X] at Level 3. Your options: 1. made-up or reduced data, stay Class [X] · 2. a Class 1 pilot (rules in docs/LADDER.md) · 3. upgrade to Level [5 or 7] to build apps that [use real staff data / serve customers]." Wait for the choice. Table in `docs/AFTER-THE-LAB.md`. |
+| The Owner asks what to do after the Lab, to finish Level 3, to continue, about a next app, or about their team | Open `docs/AFTER-THE-LAB.md` and follow the matching part (1 finish Level 3 · 2 continue · 3 next app · 4 team). |
 | A hard stop appears (payments, sensitive data, core systems) | "Coach: this is past the safe ceiling for a solo factory. Talk to an engineer first. Art of Scale can help you decide build, buy or engineer in a 30-min call." |
 | A level-up is due (entry tests met) | "Coach: you meet the Level N tests. Run `sf-level` to install Level N+1." |
 
@@ -101,6 +103,7 @@ You coach while you build. Keep coaching short: at most 2 lines, prefixed **Coac
 ## 6. Skills (plain Markdown procedures)
 Skills live in `.claude/skills/<name>/SKILL.md` (before install: `factory-setup/skills/`). When the Owner types a skill name (with or without `/`), open that file and follow it step by step.
 `sf-start` launch and setup · `sf-intent` capture a change ("grill me") · `sf-explain` explain or teach anything · `sf-ship` prove and ship · `sf-wrap` end a session · `sf-level` check level and install the next one · `sf-new-project` start your next app · `sf-app-filter` choose what to build · `sf-help` when stuck · `sf-coach` the coaching method.
+After the Lab: `docs/AFTER-THE-LAB.md` (finish Level 3, continue the build, the next app, your team).
 
 ## 7. Lessons (a mistake made twice becomes a rule)
 - (V1.7, dry run) A slice was reported "live in about a minute" but only built as a Preview. Say "live" only after the Production deployment is Ready or the Owner sees it.

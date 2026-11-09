@@ -17,6 +17,7 @@ Most factories reach Level 3 through `sf-start`. If a test is ✗, fix just that
 - **Login and per-user security:** follow `sf-start` stage 6, steps 4–5 (per-user policies, no `LAB ONLY` policy, the login screen from `src/lib/auth.tsx`). Then run the break-it test with two made-up users.
 - **Undo:** show the Owner Vercel → Deployments → Instant Rollback.
 - Session rituals: start each session by reading `docs/PROGRESS.md`; end with `sf-wrap`.
+- The full post-Lab checklist, with times, is Part 1 of `docs/AFTER-THE-LAB.md`.
 
 ## Levels 4–6 (SHIFTAI Coding Sprint)
 The recipes for Level 4 (Auto-QA: evals before the build, independent reviewer and security-attacker agents, preview and pull request per change), Level 5 (Evidence and governed: before/after evidence, protected main, backups and a tested restore, alerts, POPIA starter pack, engineer check; the Certified Builder certificate) and Level 6 (Multi-lane QA: a second-vendor code reviewer and a browser-only tester) come in the **Sprint Upgrade Pack**, a zip that adds to this kit with near-zero setup.
