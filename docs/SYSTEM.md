@@ -1,6 +1,6 @@
 # Art of Scale System Map: how this app works, in plain English
 <!-- The coding agent keeps this current (AGENTS.md §3, "Keep the lights on"). The Owner should be able to read it in 3 minutes and explain the app to anyone. No code. -->
-Last updated: [YYYY-MM-DD] · Level: L2
+Last updated: [YYYY-MM-DD] · Level: L3 · App class: [0 / P / N / 1 pilot]
 
 ## What the app does
 [One paragraph: who uses it, for what.]

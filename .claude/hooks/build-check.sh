@@ -50,12 +50,12 @@ if [ -n "$dirty" ] && git rev-parse --verify HEAD >/dev/null 2>&1; then
   echo "Build check: app files are changed but not committed, so they are not live. Commit and push them, or tell the Owner they are not live yet." >&2
   rm -f "$log"; exit 2
 fi
-# V1.7: commits that are not on origin/main are not live (Level 2-3 push to main).
+# V1.7: commits that are not on origin/main are not live (Level 3 pushes to main).
 if git rev-parse --verify origin/main >/dev/null 2>&1; then
   git fetch --quiet origin main >/dev/null 2>&1
   ahead="$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)"
   if [ "${ahead:-0}" -gt 0 ]; then
-    echo "Build check passed, but $ahead commit(s) are not on main, so they are not live. Push with 'git push origin HEAD:main' (Level 2-3), or give the Owner the pull request link (Level 4+). Do not say live." >&2
+    echo "Build check passed, but $ahead commit(s) are not on main, so they are not live. Push with 'git push origin HEAD:main' (Level 3), or give the Owner the pull request link (Level 4+). Do not say live." >&2
     rm -f "$log"; exit 2
   fi
 fi

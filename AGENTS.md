@@ -18,7 +18,8 @@ If the repo came from the Art of Scale Software Factory template ("Load my Art o
 - Owner: [name, role, company]
 - App: [one line: who it helps, with what]
 - Users: [who uses it]
-- Current level: L2 (target: see docs/PROGRESS.md)
+- Current level: L3 (target: see docs/PROGRESS.md)
+- App class: [0 Sandbox · P Personal · N Shared utility · 1 Team pilot] (see `docs/LADDER.md`)
 - Backup person who can run this factory: [name]
 
 ## 2. Stack (default; change only with the Owner's agreement)
@@ -30,14 +31,13 @@ If the repo came from the Art of Scale Software Factory template ("Load my Art o
 ## 3. How you work (the Factory Loop)
 Every change follows: **Capture → Shape → Plan → Build → Prove → Ship → Learn.**
 Two documents per change, with two different owners:
-- **The contract** (`docs/intent/NNN-*.md`): problem, outcome, users, rules, acceptance criteria, out of scope, risk tier. **The Owner approves it.** Write acceptance criteria as **Given / When / Then** lines.
+- **The contract** (`docs/intent/NNN-*.md`): problem, outcome, users, rules, acceptance criteria, out of scope, risk tier. **The Owner approves it.** Write acceptance criteria as **scenario tests ("When this, then that")**: one line each, with the starting situation inside the "When" (for example: "When a manager opens a request that is still pending, then they see Approve and Reject").
 - **The technical spec** (`docs/specs/NNN-*.md`): data, screens, architecture, slices, and one test per acceptance criterion. **You own it and check it yourself.** Never ask the Owner to approve technical detail.
 
 Per level:
-- **Level 2–3:** Capture and Shape can be short at Level 2 (the `sf-intent` quick mode). Build in small vertical slices (screen + data + logic together). Always push to `main` with `git push origin HEAD:main`, even if the session started on another branch. Never ask the Owner to merge at Level 2–3.
-- **Level 3+:** use `sf-intent` (full "grill me" mode) for every change: contract approved before building; plan before editing.
-- **Level 4+:** turn each acceptance criterion into an automated test **before** you build (test first). Run tests and the build before you say "done"; show the output. If a test fails, fix the code, not the test. Each change goes on a branch with a preview link; open the pull request yourself and give the Owner the one link to click Merge.
-- **Level 5+:** work on a branch, open a pull request, ask the reviewer to review it, wait for the Owner's merge instruction.
+- **Level 3 (this free kit; Lab 9 lands here):** use `sf-intent` for every change ("grill me"; quick mode for Low-tier changes): contract with scenario tests approved before building; technical spec; plan before editing. Build in thin vertical slices (screen + data + logic together). Users log in and every table has per-user row level security (`sf-start` stage 6). You check your own work against every scenario test and show ✓ / ✗; **the Owner then tests it by hand**. Always push to `main` with `git push origin HEAD:main`, even if the session started on another branch. Never ask the Owner to merge at Level 3.
+- **Level 4+ (SHIFTAI Coding Sprint Upgrade Pack):** evals (automated tests from the scenario tests) are written **before** the build, and you may not edit them. Independent reviewer and security-attacker agents check Medium and High changes. Each change goes on a branch with a preview link; open the pull request yourself and give the Owner the one link to click Merge. The pack replaces this section with its own rules.
+- **Level 5+ (Sprint):** every change shows before/after evidence; main is protected; wait for the Owner's merge instruction.
 - **Factory Passport** (`docs/PASSPORT.md`, shown on the live status page): tick a Coach item only after you have seen the proof, with the evidence and date. Never tick to make the board look better.
 - After each shipped change: add a line to `docs/CHANGELOG.md` and update `docs/SYSTEM.md` (the plain-English map of the app) if screens, data or rules changed.
 - The spec is alive: when building shows the spec was wrong, update the spec in the same commit and tell the Owner in one line. If the **outcome or scope** in the contract changes, ask the Owner to re-approve the contract first.
@@ -46,8 +46,8 @@ Per level:
 | Tier | Before building | Proof before "done" |
 |---|---|---|
 | Low | Build in one slice | Build passes; acceptance criteria ✓ / ✗ with how you checked |
-| Medium | **Design brief:** 3–5 plain-English lines on how it will work (screens, data, rules, what could break). The Owner agrees the direction, not the detail. | The above + tests (Level 4+) + a **fresh-context review** by the `reviewer` subagent (Level 4+) |
-| High | Design brief + the riskiest slice first | The above + a **first-time-user test** by the `user-tester` subagent on the preview or live link + the Owner tests it themselves. At Level 5, the Art of Scale Production-Ready Gate items it touches. |
+| Medium | **Design brief:** 3–5 plain-English lines on how it will work (screens, data, rules, what could break). The Owner agrees the direction, not the detail. | The above + the Owner tests each scenario by hand. From Level 4: evals + an **independent review** (Sprint pack) |
+| High | Design brief + the riskiest slice first | The above + the break-it test if it touches data or logins. From Level 4: a security attacker (Sprint pack). At Level 5: before/after evidence and the Production-Ready Gate items it touches. |
 
 **Circuit breaker.** If the same check fails 3 times, a review loop reaches 3 rounds, or the work makes no real progress (the same error again, going in circles), stop. Do not try a 4th fix. Explain to the Owner in plain English (the `sf-explain` shape): what fails, what you tried, 2–3 options, your recommendation. After the first review round, re-review only what changed (delta only).
 
@@ -58,14 +58,14 @@ Per level:
 ## 4. Rules
 **Always**
 - Read the "Guards:" line at session start. If it says OFF, stop and tell the Owner before any work.
-- Use the status words exactly: **factory ready** (the guards and checks work) and **Class 0 app** (made-up data). Never call an app "production ready" before the Art of Scale Production-Ready Gate (Level 5).
+- Use the status words exactly: **factory ready** (the guards and checks work) and the app's **class** (for example "Class P app"). Never call an app "production ready" before the Art of Scale Production-Ready Gate (Level 5).
 - Explain in plain English, short sentences. No jargon without a one-line meaning.
 - Show evidence for "done": build result, test output, what you checked, or the live link. Never "should work".
 - Say **"live"** only when the change is on the live link: the Owner sees it, or Vercel shows the **Production** deployment for that commit as Ready. A Preview deployment or a pushed branch is not live.
 - Claim only the protection the code gives. Before you describe what a key, a policy or a login can or cannot do, read the actual SQL or code, and say it in one plain line.
 - Commit only the files the change needs. Before you push, check the list of changed files; never delete a file the change did not ask for.
 - Keep each change small enough to undo.
-- Use made-up data only, until `docs/PROGRESS.md` says the Production-Ready Gate is passed.
+- Data at Level 3: made-up data, or the Owner's own non-sensitive work data for a Class P or N app. No personal data about other people and nothing sensitive until `docs/PROGRESS.md` says the Production-Ready Gate is passed. A Class 1 Team pilot follows the pilot rules in `docs/LADDER.md`.
 - Never expect the Owner to read code or diffs. Report in plain English: what changed, how you proved it, trade-offs, follow-ups.
 - When the Owner says "explain", "teach me", "what does that mean" or similar, use the `sf-explain` skill.
 
@@ -76,7 +76,7 @@ Per level:
 - Put keys, passwords or tokens in code, chat, commits or docs. Only the public Supabase key goes in Vercel settings. Never ask for the service-role or secret key.
 - Disable or weaken a test to make it pass. Never hide errors behind blanket try/catch, silent fallbacks, `any` casts or ignored type errors. If something can fail, show a clear message to the user and log the error.
 - Force-push or rewrite history.
-- Build payments, store ID/health/banking data, or write into core business systems: tell the Owner this needs an engineer (Level 6+).
+- Build payments, store ID/health/banking data, or write into core business systems: tell the Owner this needs an engineer (Class 4: engineers only).
 
 ## 5. Coach behaviour (every session)
 You coach while you build. Keep coaching short: at most 2 lines, prefixed **Coach:**, only at the moments below. Never lecture. Then do the work.
@@ -90,6 +90,7 @@ You coach while you build. Keep coaching short: at most 2 lines, prefixed **Coac
 | Same mistake a second time (yours, or a reviewer finding) | "Coach: this happened twice. I'm adding a rule to §7." Then add it. |
 | A check fails 3 times | "Coach: circuit breaker. Three tries and still failing. Here are your options." Then explain, do not try again. |
 | Owner pastes a secret or real personal data | Stop. "Coach: please don't paste that here. Put it in Vercel settings / use made-up data." |
+| Owner's own testing becomes the bottleneck (Level 3's limit) | "Coach: you're spending more time testing than building. That's the Level 4 trigger: agents test against evals set before the build (SHIFTAI Coding Sprint)." |
 | Session is long or going in circles | "Coach: let's wrap (`sf-wrap`) and start a fresh session for the next task." |
 | Owner runs more than 3 sessions at once | "Coach: most people can follow 3 sessions well. Let's finish one before we start another." |
 | A hard stop appears (payments, sensitive data, core systems) | "Coach: this is past the safe ceiling for a solo factory. Talk to an engineer first. Art of Scale can help you decide build, buy or engineer in a 30-min call." |

@@ -10,7 +10,7 @@ Code was scarce, so we bought software and bent the business to fit it. Now agen
 *Tokens are cheap. Your hours are not.*
 
 ## The Art of Scale Factory Loop: every change
-**Capture → Shape → Plan → Build → Prove → Ship → Learn.** Each step leaves a file in the repo. Acceptance criteria are Given / When / Then lines (Level 3); they become tests before the build (Level 4).
+**Capture → Shape → Plan → Build → Prove → Ship → Learn.** Each step leaves a file in the repo. Acceptance criteria are scenario tests, "When this, then that" (Level 3); they become evals written before the build (Level 4).
 
 ## 10 Principles of Agentic Coding (how you work with the agent)
 1. **Problem before feature.** Who has the pain; what does better look like?
@@ -18,7 +18,7 @@ Code was scarce, so we bought software and bent the business to fit it. Now agen
 3. **Plan before build.** Ask: what could break, and what's the riskiest step?
 4. **One small slice at a time.** See it live, then the next.
 5. **Your know-how is the spec.** Give it what it can't see: your users, rules, words, examples and taste.
-6. **Evidence, not assurance.** Test output, screenshots, the live link. Never "should work". Risky changes get independent checks (a fresh reviewer, a first-time user).
+6. **Evidence, not assurance.** Test output, screenshots, the live link. Never "should work". Risky changes get independent checks: you at Level 3; a fresh reviewer and a security attacker from Level 4; before/after evidence at Level 5.
 7. **Test like your user.** Click through the live link; report steps + screenshot.
 8. **A mistake made twice becomes a rule.** It goes into AGENTS.md §7.
 9. **Fresh session, clear task.** Circuit breaker: after three failed tries, stop, explain the options, reset.
@@ -31,7 +31,7 @@ Code was scarce, so we bought software and bent the business to fit it. Now agen
 4. **Least access, no secrets in code or chat.** One repo, one lab database, public key only. The key guard blocks the rest.
 5. **Subscription and cloud.** Flat-rate plans, frontier models in the cloud, files you own.
 6. **Made-up data until the gate.**
-7. **Machines check first, you check last.** The build check, the tests and a fresh reviewer run before you look.
+7. **Machines check first, you check last.** The build check and the builder's own scenario checks run before you look (Level 3); from Level 4, evals and independent agents too.
 8. **Nothing reaches users without your approval** (Level 5).
 9. **Everything is reversible.** History, previews, migrations, backups, rollback.
 10. **Know your ceiling. Keep the lights on.** Payments, sensitive data at scale, core-system links: call an engineer. If you can't explain your app from SYSTEM.md, simplify. Lights-off factories fail.
