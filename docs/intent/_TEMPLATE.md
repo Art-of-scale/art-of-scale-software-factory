@@ -16,11 +16,11 @@ Owner: [name] · Date: [YYYY-MM-DD] · Status: draft | approved · Risk tier: Lo
 ## Version 1 stories (3–5)
 1. As a [user], I can [action], so that [benefit].
 
-## Acceptance criteria (Given / When / Then)
-- **Story 1:** Given [situation], when [the user does X], then [they see / the app does Y].
+## Scenario tests ("When this, then that")
+- **Story 1:** When [the user, in this situation, does X], then [they see / the app does Y].
 
 ## Rules and data
-[Business rules, limits, who may see or change what. Personal or sensitive data? Made-up data until the Production-Ready Gate.]
+[Business rules, limits, who may see or change what. App class (0, P, N or 1 pilot)? Personal or sensitive data? None until the Production-Ready Gate (Level 5).]
 
 ## Out of scope
 - Later: ...

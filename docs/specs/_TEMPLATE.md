@@ -3,7 +3,7 @@ From contract: docs/intent/NNN-[slug].md · Owner of this file: the coding agent
 <!-- The agent writes and self-checks this file. The Owner does not need to approve it. -->
 
 ## Data
-| Table | Fields | Row level security | Notes (made-up data until the gate) |
+| Table | Fields | Row level security | Notes (user_id + per-user policy; data class) |
 |---|---|---|---|
 
 ## Screens and flow

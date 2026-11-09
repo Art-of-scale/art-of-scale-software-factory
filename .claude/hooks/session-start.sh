@@ -33,6 +33,6 @@ fi
 if [ -f scripts/passport.mjs ] && command -v node >/dev/null 2>&1; then
   node scripts/passport.mjs 2>/dev/null || echo "Factory Passport: could not be read. Check scripts/passport.mjs."
 fi
-echo "Status words: say 'factory ready' (the guards and checks work) and 'Class 0 app' (made-up data). Never call the app 'production ready' before the Art of Scale Production-Ready Gate (Level 5)."
+echo "Status words: say 'factory ready' (the guards and checks work) and the app's class (for example 'Class P app'). Never call the app 'production ready' before the Art of Scale Production-Ready Gate (Level 5)."
 echo "Art of Scale Coding Coach mode is on: short \"Coach:\" notes at the moments in AGENTS.md section 5. Say \"explain\" or \"grill me\" any time."
 exit 0

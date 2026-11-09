@@ -11,9 +11,9 @@ Use this when the Owner has one idea and asks "which way should I build [idea]?"
 |---|---|---|
 | 1 | Does an existing product do this well enough, without giving away your edge? | **Buy** (SaaS or no-code) |
 | 2 | Is it one job, one person, no stored data, easy to replace? | **Chat or HTML** (Level 0) |
-| 3 | Could a failure hurt someone? Real sensitive data · money or core systems · one customer seeing another's data · downtime you can't afford | **Engineers**: a technical steward (Level 6+), or a dev house that also runs it |
+| 3 | Could a failure hurt someone? Real sensitive data · money or core systems · one customer seeing another's data · downtime you can't afford | **Engineers**: a technical steward (Level 7+, or Class 4: engineers only), or a dev house that also runs it |
 | 4 | Is it a quick pilot with standard screens? | **Lovable** (Level 1) |
-| — | No to all four: custom, and a failure would not hurt anyone | **This software factory**: Level 2–4 to prove it, Level 5 to run it |
+| — | No to all four: custom, and a failure would not hurt anyone | **This software factory**: Level 3 to prove it, Level 5 to run it with many staff |
 
 Then give 4 lines: **Route** · **Level** · **Red flags** (from the list below, only those that apply) · **First step**. Say once: "Buy what's standard. Build what's yours. Let consequences, not convenience, choose the route." If the route is Engineers, add the four engineer questions: can you prove who can see what (access), what happens when two things change at once (transactions), how you recover (backups and restore), and who maintains it?
 

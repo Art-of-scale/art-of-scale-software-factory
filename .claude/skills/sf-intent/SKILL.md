@@ -23,7 +23,7 @@ The Owner is a non-technical founder. They know the business, the users and the 
 ## Choose the mode first
 | Mode | When | Questions |
 |---|---|---|
-| **Quick** | Level 2, a small change, or the lab (`sf-start` stage 3) | 3–6. Problem, user, done when, must never. |
+| **Quick** | A Low-tier change, or the lab (`sf-start` stage 3) | 3–6. Problem, user, done when, must never. |
 | **Grill** (default from Level 3) | A new feature, a new app, or anything with data or several users | 8–15, the full tree below |
 | **Deep** | A new app with real data ahead, or the Owner says "grill me hard" | Up to 25, plus the pre-mortem and the "buy before build" test |
 Say which mode you picked and why, in one line. The Owner can change it.
@@ -38,7 +38,7 @@ Say which mode you picked and why, in one line. The Owner can change it.
 7. **Scope knife.** "If you could ship only one thing this week, what is it?" Sort everything into: **Version 1 (must)** · **Later** · **Never**. Keep version 1 to 3–5 user stories.
 8. **Risk tier and hard stops.** Classify the change (table below) and tell the Owner the tier and what it means. Check the 3 hard stops: payments · sensitive personal data at scale · writing into core systems.
 9. **Pre-mortem (Deep mode, or for any High tier).** "It's three months from now and nobody uses this. Why?" Turn the top answer into a rule or a story.
-10. **Acceptance criteria.** You draft them. Write 1–3 per story as **Given / When / Then** in the user's words. Read them back. The Owner corrects. These become the tests at Level 4.
+10. **Acceptance criteria.** You draft them. Write 1–3 per story as **scenario tests ("When this, then that")** in the user's words, with the starting situation inside the "When". Read them back. The Owner corrects. At Level 3 the Owner tests them by hand; at Level 4 they become evals written before the build.
 
 ## Risk tier (sets how much proof the change needs)
 | Tier | Signs | What it means for building |
@@ -54,7 +54,7 @@ Score the intent 1–5 on each line, silently. If any line is below 4, ask the o
 | Specific user | A named role and the moment they use it |
 | Real pain | A number: how often, how long, what it costs |
 | Clear outcome | One measurable "better" |
-| Testable | Every story has Given / When / Then lines a stranger could check |
+| Testable | Every story has scenario tests ("When this, then that") a stranger could check |
 | Bounded | Out-of-scope list exists; version 1 is 3–5 stories |
 Show the Owner the total in one line, for example "Intent quality: 23/25. One open question on approvals."
 

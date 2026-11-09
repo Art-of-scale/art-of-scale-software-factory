@@ -32,7 +32,7 @@ function Passport({ p }: { p: Passport }) {
           <p className="next-h">To reach Level {p.working.n} ({p.working.name}):</p>
           <ol className="next">{p.next.map((s) => <li key={s}>{s}</li>)}</ol>
         </>
-      ) : <p className="next-h">Level 5 reached. Levels 6 and up need an engineer.</p>}
+      ) : <p className="next-h">Level 5 reached. Level 6 (multi-lane QA) comes before Level 7; Levels 7 and up need an engineer.</p>}
       <div className="levels">
         {p.levels.map((l) => (
           <details key={l.n} className={`lvl ${l.edition}`} open={p.working?.n === l.n}>
@@ -90,7 +90,7 @@ export default function App() {
       </ul>
       <Passport p={__PASSPORT__} />
       <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
-      <p className="foot"><b>Factory ready</b> means the guards and checks work. Your app is a <b>Class 0 app</b>: made-up data only. It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
+      <p className="foot"><b>Factory ready</b> means the guards and checks work. At Level 3 your app may hold made-up data or your own non-sensitive work data (Class 0, P or N). It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
         <b>What level is your factory?</b> Find your level and your next step with the free Art of Scale Software Factory X-Ray.{' '}
         {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : null}

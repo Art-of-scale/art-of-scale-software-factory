@@ -13,7 +13,7 @@ For founders and leaders who don't write code. Part of the Art of Scale Factory 
 
 1. In the new tab, sign in to Vercel **with GitHub**. If Vercel says you already have an account with this email: sign in the way you did before (for example Google), then Account Settings → Authentication → **Connect GitHub**, and click the Load button again.
 2. Choose **GitHub** as the Git provider. Keep the repo **private**. If GitHub asks to install Vercel, allow it (you can narrow it to this one repo later).
-3. When asked, add **Supabase** (a new project, for made-up data only). No credit card is needed.
+3. When asked, add **Supabase** (a new project: made-up data, or your own non-sensitive work data). No credit card is needed.
 4. Click **Deploy**. Open your live link: the status board shows Code, Hosting, Database and Coach.
 5. Open **claude.ai/code** in your browser (it always runs in the cloud; nothing runs on your computer) → **Connect GitHub**. This takes two steps: **Authorise** the Claude GitHub App, then **Install** it. On the install screen choose **Only select repositories** → `my-software-factory`. Then pick the repo and paste:
 
@@ -28,6 +28,6 @@ No Supabase step in the Vercel flow? After the deploy: Vercel → your project �
 Repo not visible in Claude Code? github.com/settings/installations → Claude → Configure → add the repo. GitHub may ask you to confirm your email first.
 
 ## Rules
-Made-up data only until the Art of Scale Production-Ready Gate. Never paste keys or passwords into chat. Only the public Supabase key goes into Vercel.
+Level 3 (this kit): made-up data, or your own non-sensitive work data (Class 0, P or N). No personal or sensitive data until the Art of Scale Production-Ready Gate (Level 5). Never paste keys or passwords into chat. Only the public Supabase key goes into Vercel.
 
 © Art of Scale. Method: spec-driven development, founder edition, built on Anthropic's AI-native SDLC playbook.
