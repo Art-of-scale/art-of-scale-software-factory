@@ -86,7 +86,7 @@ Coach note: "Coach: from now on, every push to main goes live in about a minute.
 - Seed data: 10–20 made-up rows are optional at Level 3, because each user now sees only their own rows. Instead, the app's empty state should invite the user to add their first item.
 Then tell the Owner, in one plain line, exactly what a logged-in user can do and what a stranger with the link can do (for example: "A stranger sees only the login screen. Each logged-in person sees and adds only their own requests, and can change only pending ones. Nobody can delete."). Never claim more protection than the SQL gives.
 
-**Login screen.** Use `src/lib/auth.tsx` (already in the template: `useSession`, `SignIn`, `SignOutButton`). Show `SignIn` when there is no session, and the app when there is one. Email and password, no magic links at Level 3.
+**Login screen.** Use `src/lib/auth.tsx` (already in the repo from the template or the kit: `useSession`, `SignIn`, `SignOutButton`; keep it when you scaffold). Show `SignIn` when there is no session, and the app when there is one. Email and password, no magic links at Level 3.
 
 Then switch the app from the local array to Supabase. Push to `main`. Ask the Owner to refresh the live link and confirm they see the data.
 When the Owner confirms the live link, the login screen and Database ✓, tick `l3-live` and `l3-db` in `docs/PASSPORT.md` (with the date), commit and push.
