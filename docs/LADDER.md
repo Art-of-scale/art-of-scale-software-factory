@@ -15,10 +15,15 @@ Each level adds one capability, bought with one investment of your time or money
 | Automate and run | **L6 Multi-lane QA** | 3 lanes: builder (vendor A), code reviewer (vendor B), browser-only tester. Required before L7; optional if you stay with internal apps | Three independent lanes | Sprint (stretch) |
 | Scale | **L7 Gated** | Engineer-installed gates: staging, scans, code owners, signed releases | + an engineer | Engineer service |
 | Scale | **L8 Orchestrated** | One chat runs many agents in parallel; it never merges or deploys | (productivity) | Engineer service |
-| Scale | **L9 Team** | Certified staff builders contribute through the gates; a Certified Factory Owner runs the register and scorecard | (people) | Engineer service |
+| Scale | **L9 Team** | Certified staff builders contribute through the gates; a Factory Owner (certified at Level 9) runs the register and scorecard | (people) | Engineer service |
 | Scale | **L10 Owned platform** | An engineer-led platform owner; the company runs on it | (core systems) | Engineer service |
 
 There is no lights-off level. Class 4 apps (money, sensitive data at scale, writes into ERP, banking or payroll) stay with engineers at every level.
+
+## Certification (Level 5 to Level 10)
+A builder is certified by level, from Level 5 to Level 10, when that level's entry checks are observed on their own factory. There is no certificate below Level 5.
+- A certificate covers the date it was issued. It does **not** guarantee the builder keeps complying: that needs separate, current evidence and an audit.
+- It does **not** warrant outcomes. A certified builder can still be sloppy, make mistakes, or lack experience and judgement. Each app still needs its own review and approval.
 
 ## App classes (what you may build, and on what data)
 | Class | Who uses it | Data | If it fails |
