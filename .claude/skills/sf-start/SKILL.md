@@ -35,7 +35,7 @@ At any point the Owner can say "explain" (plain-English options, `sf-explain`) o
 4. Report a 4-line board: Code (repo) · Hosting (Vercel) · Database (Supabase) · Coach (skills and hooks loaded). For a Load-button install, ask the Owner to open the live link and tell you what the status page shows; do not write "? not checked" for a line the Owner can see.
 
 ## Stage 2. Interview (exactly 6 questions, one message)
-Ask, in one numbered list of exactly 6:
+Ask these 6 questions. **Use multiple-choice selectors where the answers fit a list** (AGENTS.md §4): question 4 (who uses it: just me · a few colleagues · about 10 named staff · customers) and question 6 (must never: store personal data about others · send emails or messages · change other systems · other) as selectors; questions 1, 2, 3 and 5 as short text. With no selector tool, ask all 6 in one numbered list:
 1. Your name, role and company (one line).
 2. What does the company do, and for whom?
 3. Which app do you want to build? If unsure, describe a task that wastes time every week.
@@ -61,7 +61,7 @@ Tell the Owner: "Your app's code is in GitHub. Next we check it is live."
 Load-button install: skip to the check at the end of this stage.
 Give these steps one at a time, and wait after each:
 1. Open https://vercel.com/signup in a **new tab** and click **Continue with GitHub** (if Vercel says you already have an account with this email: sign in the way you did before, then open https://vercel.com/account/authentication and connect **GitHub**).
-2. Add New → Project → find your repo (lab default: `founderlab`). Not listed? "Adjust GitHub App Permissions" → Only select repositories → add this repo.
+2. Add New → Project → find your repo (zip route only, the fallback when the Load button fails: `founderlab`). Not listed? "Adjust GitHub App Permissions" → Only select repositories → add this repo.
 3. Leave the settings as they are (Vercel detects Vite) → Deploy.
 4. When it finishes, copy the address (….vercel.app) and paste it here.
 Check: ask the Owner to open the link (on their phone too) and say what they see. If the build failed, ask them to paste the error lines and use `sf-help`.

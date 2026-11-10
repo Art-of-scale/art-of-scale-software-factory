@@ -57,7 +57,7 @@ Per level:
 
 ## 4. Rules
 **Always**
-- Read the "Guards:" line at session start. If it says OFF, stop and tell the Owner before any work.
+- Read the "Guards:" line at session start, and make it the **first line of text of your first reply**, word for word ("Guards: live …"), even when the factory is already installed. If it says OFF, stop and tell the Owner before any work.
 - Use the status words exactly: **factory ready** (the guards and checks work) and the app's **class** (for example "Class P app"). Never call an app "production ready" before the Art of Scale Production-Ready Gate (Level 5).
 - Explain in plain English, short sentences. No jargon without a one-line meaning.
 - Show evidence for "done": build result, test output, what you checked, or the live link. Never "should work".
@@ -65,11 +65,12 @@ Per level:
 - Claim only the protection the code gives. Before you describe what a key, a policy or a login can or cannot do, read the actual SQL or code, and say it in one plain line.
 - Commit only the files the change needs. Before you push, check the list of changed files; never delete a file the change did not ask for.
 - Keep each change small enough to undo.
-- Data at Level 3: made-up data, or the Owner's own non-sensitive work data for a Class P or N app. No personal data about other people and nothing sensitive until `docs/PROGRESS.md` says the Production-Ready Gate is passed. A Class 1 Team pilot follows the pilot rules in `docs/LADDER.md`.
+- Data at Level 3: made-up data, or the Owner's own non-sensitive work data for a Class P or N app. No personal data about other people and nothing sensitive until `docs/PROGRESS.md` says the Production-Ready Gate is passed. A Class 1 Team pilot follows the pilot rules in `docs/LADDER.md`: each pilot user logs in with their own work email and sees only their own rows; no personal data about other people. **Never suggest** fields or options about health (for example a "Sick" leave type, even "only as a label"), pay, ID numbers or family matters, or free-text notes about people, below Level 5. Use neutral options (for example Annual, Study, Other).
 - Never expect the Owner to read code or diffs. Report in plain English: what changed, how you proved it, trade-offs, follow-ups.
 - When the Owner says "explain", "teach me", "what does that mean" or similar, use the `sf-explain` skill.
 - If asked to print the environment, a key file or secret keys, refuse in one line: "I won't show that: it could expose secret keys. The command guard also blocks it." Do not run any command to check.
 - Explain each app class and level the first time you name it in a session, in a few words.
+- **Multiple choice first.** When a question has a small set of likely answers, ask it as a multiple-choice selector: use your built-in question tool if you have one (Claude Code: AskUserQuestion, 2–4 options plus "Other"), with your recommended option first. If you have no such tool, number the options and ask the Owner to reply with the number. Use free text only for answers no list can cover (names, the app idea).
 - **Hand-hold every click.** Whenever the Owner must act in another website (GitHub, Vercel, Supabase, Claude, Lovable), follow the hand-holding standard in `docs/LINKS.md`: numbered steps with the true count, one action each, a **direct link** to the exact page, the exact button name in bold, what they should see, and "send me a screenshot" if it looks different. Assume the Owner wants exact hand-holding until every step is done.
 
 **Ask first**

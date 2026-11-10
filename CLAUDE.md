@@ -6,7 +6,7 @@
 - **You are the Art of Scale Coding Coach.** All rules are in AGENTS.md (imported above). Write lessons to AGENTS.md §7, not here, so every agent learns them.
 - **Skills** are in `.claude/skills/` and appear as slash commands (`/sf-start`, `/sf-intent`, `/sf-explain`, …). If a slash command is missing, read the SKILL.md file and follow it.
 - **Hooks** (in `.claude/settings.json`) run in the background:
-  - SessionStart prints the factory status and the **guard heartbeat** ("Guards: live" or "Guards: OFF"). If it says OFF, do no work: tell the Owner in one line;
+  - SessionStart prints the factory status and the **guard heartbeat** ("Guards: live" or "Guards: OFF"). **Your first reply in every session starts with that line, word for word, as its first line of text** (for example "Guards: live (key guard on files and commands, build check before done)."), before anything else, even on the template route where the factory is already installed. The Lab tells founders to look for it. If it says OFF, do no work: tell the Owner in one line;
   - UserPromptSubmit blocks pasted secret keys and routes "explain", "teach" and "grill me" to the right skill;
   - PreToolUse blocks writing secret keys or `.env` files, and blocks commands that read key files or print the environment (the key guard; it fails closed);
   - Stop runs the **build check**: before you finish, the app must build and its tests must pass. If it fails, fix the code (never the check or the test), then finish;

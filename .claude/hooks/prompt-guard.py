@@ -45,7 +45,7 @@ if found:
     print(json.dumps({
         "decision": "block",
         "reason": (f"Key guard: your message looks like it contains {found}, so I stopped it before it reached the AI. "
-                   "Remove it and send again; keys go only in Vercel settings."),
+                   "Remove it and send again; keys go only in Vercel settings (https://vercel.com/dashboard → your project → Settings → Environment Variables)."),
     }))
     sys.exit(0)
 
@@ -57,7 +57,7 @@ if (re.search(r"\b(print|dump|reveal|echo|cat)\b[^.?!\n]{0,30}\b(environment|env
     print(json.dumps({
         "decision": "block",
         "reason": "Command guard: I stopped that. Printing the environment could show secret keys. "
-                  "To check a setting, open Vercel → your project → Settings → Environment Variables yourself.",
+                  "To check a setting, open https://vercel.com/dashboard → your project → Settings → Environment Variables yourself.",
     }))
     sys.exit(0)
 notes = []
