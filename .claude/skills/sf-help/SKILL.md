@@ -5,6 +5,8 @@ description: Troubleshoot common problems for a non-technical founder - Vercel b
 
 # When stuck
 
+Always send the Owner to the exact page with a direct link from `docs/LINKS.md`, one numbered step at a time (the hand-holding standard). If a page looks different from what you described, ask for a screenshot.
+
 Ask for: what they did, what they expected, what they see (paste the error lines or describe the screen). Then match:
 
 | Symptom | Likely cause | Fix |
