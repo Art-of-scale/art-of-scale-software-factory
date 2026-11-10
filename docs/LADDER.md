@@ -36,7 +36,7 @@ A builder is certified by level, from Level 5 to Level 10, when that level's ent
 | 3 Core | The company runs on it | Customer data at volume | Core operations stop |
 | 4 Critical | Money, sensitive data at scale, core-system writes | Sensitive | Material loss: engineers only |
 
-**Lowest level allowed:** 0 → L0 · P → L0 (L1–L2 with care) · N → L3 · 1 → L5 (pilot from L3: about 10 named staff, no personal data, weekly export, Business Owner sign-off) · 2 → L7 · 3 → L10 · 4 → engineers only.
+**Lowest level allowed:** 0 → L0 · P → L0 (L1–L2 with care) · N → L3 · 1 → L5 (pilot from L3: about 10 named staff, each logs in with their own work email and sees only their own rows; no personal data about other people; weekly export; Business Owner sign-off) · 2 → L7 · 3 → L10 · 4 → engineers only.
 
 ## Entry tests (all must be yes)
 - **L3:** a change goes live within ~5 min · the app reads and writes its database · users log in and every table has per-user row level security (no `LAB ONLY` policy) · the break-it test passed (user A cannot see or change user B's rows) · every change has an approved contract with scenario tests ("When this, then that") and a technical spec · the agent reaches one repo only · only the public key in Vercel · you know how to undo a bad change (Vercel → Deployments → Instant Rollback).

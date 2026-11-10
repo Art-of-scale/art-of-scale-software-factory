@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase, supabaseConfigured, supabaseVarSource } from './lib/supabase'
 
-// Art of Scale Software Factory X-Ray link (V1.5). While empty, the board shows 'Link coming soon'.
+// Art of Scale AI Leverage X-Ray link (V1.5; live from V1.9). While empty, the board shows 'Link coming soon'.
 const XRAY_URL = 'https://xray.artofscale.io/ai-leverage-xray/'
 const SPRINT_URL = 'https://artofscale.io/coding-sprint/'
 
@@ -27,7 +27,7 @@ function Passport({ p }: { p: Passport }) {
   return (
     <section className="passport" aria-label="Factory Passport">
       <p className="kicker">FACTORY PASSPORT</p>
-      <h2>Your factory: Level {p.reached} · {p.reachedName}</h2>
+      <h2>{p.working && p.reached < 3 ? `Your factory: Level 3 in progress (today: Level ${p.reached})` : `Your factory: Level ${p.reached} · ${p.reachedName}`}</h2>
       {p.working ? (
         <>
           <p className="next-h">To reach Level {p.working.n} ({p.working.name}):</p>
@@ -97,7 +97,7 @@ export default function App() {
       )}
       <p className="foot"><b>Factory ready</b> means the guards and checks work. At Level 3 your app may hold made-up data or your own non-sensitive work data (Class 0: made-up data only · Class P: personal, only you use it · Class N: shared utility, a few colleagues, no sensitive data). It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
-        <b>What level is your factory?</b> Find your level and your next step with the free Art of Scale Software Factory X-Ray.{' '}
+        <b>What level is your factory?</b> Find your level and your next step with the free Art of Scale AI Leverage X-Ray.{' '}
         {XRAY_URL ? <a href={XRAY_URL} target="_blank" rel="noopener noreferrer">Do your free X-Ray</a> : null}
         {' '}Ready for Level 5? See the <a href={SPRINT_URL} target="_blank" rel="noopener noreferrer">SHIFTAI Coding Sprint</a>.
       </aside>

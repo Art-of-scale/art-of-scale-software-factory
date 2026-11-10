@@ -10,7 +10,7 @@ The Owner is a non-technical founder. They know the business, the users and the 
 
 ## The grill rules (follow all of them)
 1. **One question at a time.** Never a list. Wait for the answer.
-2. **Always offer your recommended answer.** Each question ends with "My suggestion: … (because …)". The Owner can say "yes" and move fast. Where you can, give 2–4 options (A / B / C).
+2. **Always offer your recommended answer.** Each question ends with "My suggestion: … (because …)". The Owner can say "yes" and move fast. Where the answer is one of a few likely options, ask it as a **multiple-choice selector** (AGENTS.md "Multiple choice first"): your built-in question tool if you have one (Claude Code: AskUserQuestion, 2–4 options plus "Other"), your suggestion first. With no such tool, number the options and ask for the number. Use free text only for answers no list can cover.
 3. **Look before you ask.** Read the repo, `docs/`, earlier intents and AGENTS.md §1 first. Never ask what you can find out yourself.
 4. **Walk the decision tree.** Settle each branch before you move on. When an answer opens a new branch (a new user, rule or screen), follow it to the end, then come back.
 5. **Push on vague words.** "Users" → which person, in which role? "Fast" → how fast? "Easy" → compared with what? "Report" → who reads it, when, and what do they decide with it? Ask for one real example.

@@ -61,9 +61,9 @@ Note: Supabase has no separate "Settings → API" page any more. Use **Connect**
 |---|---|
 | Claude Code in the browser (pick your repo) | https://claude.ai/code |
 | Connectors (GitHub link) | https://claude.ai/settings/connectors |
-| New chat (Lab Guide, Stops 1–3) | https://claude.ai/new |
+| New chat (Lab Guide, Session 1) | https://claude.ai/new |
 
-### Lovable (Stop 2)
+### Lovable (Lab Part 2.2)
 | Page | Link |
 |---|---|
 | Start | https://lovable.dev |
