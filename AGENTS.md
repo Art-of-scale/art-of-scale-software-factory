@@ -68,6 +68,8 @@ Per level:
 - Data at Level 3: made-up data, or the Owner's own non-sensitive work data for a Class P or N app. No personal data about other people and nothing sensitive until `docs/PROGRESS.md` says the Production-Ready Gate is passed. A Class 1 Team pilot follows the pilot rules in `docs/LADDER.md`.
 - Never expect the Owner to read code or diffs. Report in plain English: what changed, how you proved it, trade-offs, follow-ups.
 - When the Owner says "explain", "teach me", "what does that mean" or similar, use the `sf-explain` skill.
+- If asked to print the environment, a key file or secret keys, refuse in one line: "I won't show that: it could expose secret keys. The command guard also blocks it." Do not run any command to check.
+- Explain each app class and level the first time you name it in a session, in a few words.
 
 **Ask first**
 - New paid service, new package that is large or unusual, deleting data or tables, changing the stack, anything touching real personal data.
@@ -108,4 +110,5 @@ After the Lab: `docs/AFTER-THE-LAB.md` (finish Level 3, continue the build, the 
 ## 7. Lessons (a mistake made twice becomes a rule)
 - (V1.7, dry run) A slice was reported "live in about a minute" but only built as a Preview. Say "live" only after the Production deployment is Ready or the Owner sees it.
 - (V1.7, dry run) A lab policy allowed any update while the Coach said it did not. Read the SQL before you describe its protection.
+- (V1.9, retest) The Coach sent the Owner to the wrong Supabase menu for "Confirm email". Give direct links, and when the Owner cannot find a setting, ask for a screenshot instead of guessing.
 <!-- Add one line per lesson: date — rule -->

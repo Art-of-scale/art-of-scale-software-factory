@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { supabase, supabaseConfigured, supabaseVarSource } from './lib/supabase'
 
 // Art of Scale Software Factory X-Ray link (V1.5). While empty, the board shows 'Link coming soon'.
-const XRAY_URL = ''
+const XRAY_URL = 'https://xray.artofscale.io/ai-leverage-xray/'
+const SPRINT_URL = 'https://artofscale.io/coding-sprint/'
 
 type State = 'ok' | 'wait' | 'fail'
 interface Check { label: string; detail: string; state: State }
@@ -89,11 +90,16 @@ export default function App() {
         ))}
       </ul>
       <Passport p={__PASSPORT__} />
-      <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
-      <p className="foot"><b>Factory ready</b> means the guards and checks work. At Level 3 your app may hold made-up data or your own non-sensitive work data (Class 0, P or N). It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
+      {__COACH_READY__ ? (
+        <p className="foot">Next: open a new session on this repo in Claude Code and say <code>continue my build</code> (or <code>what now after the lab</code>).</p>
+      ) : (
+        <p className="foot">Next: open Claude Code on this repo and paste: <code>Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.</code></p>
+      )}
+      <p className="foot"><b>Factory ready</b> means the guards and checks work. At Level 3 your app may hold made-up data or your own non-sensitive work data (Class 0: made-up data only · Class P: personal, only you use it · Class N: shared utility, a few colleagues, no sensitive data). It is <b>not production ready</b> until it passes the Art of Scale Production-Ready Gate (Level 5). Art of Scale.</p>
       <aside className="cta">
         <b>What level is your factory?</b> Find your level and your next step with the free Art of Scale Software Factory X-Ray.{' '}
-        {XRAY_URL ? <a href={XRAY_URL}>Do your free X-Ray</a> : null}
+        {XRAY_URL ? <a href={XRAY_URL} target="_blank" rel="noopener noreferrer">Do your free X-Ray</a> : null}
+        {' '}Ready for Level 5? See the <a href={SPRINT_URL} target="_blank" rel="noopener noreferrer">SHIFTAI Coding Sprint</a>.
       </aside>
     </main>
   )

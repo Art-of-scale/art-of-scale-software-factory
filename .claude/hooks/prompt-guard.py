@@ -44,14 +44,22 @@ if not found:
 if found:
     print(json.dumps({
         "decision": "block",
-        "reason": (f"Coach: your message looks like it contains {found}, so I stopped it before it reached the AI. "
-                   "Never paste keys or passwords into chat. If a setting needs it, put it in Vercel → Settings → "
-                   "Environment Variables yourself. If this key may be exposed, rotate it in that service. "
-                   "Remove it and send your message again."),
+        "reason": (f"Key guard: your message looks like it contains {found}, so I stopped it before it reached the AI. "
+                   "Remove it and send again; keys go only in Vercel settings."),
     }))
     sys.exit(0)
 
 low = prompt.lower().strip()
+# V1.9: a request to print the environment or secret keys is stopped here, visibly, before the AI sees it.
+if (re.search(r"\b(print|dump|reveal|echo|cat)\b[^.?!\n]{0,30}\b(environment|env|\.env|secrets?|secret keys?|service[ _-]?role)\b", low)
+        or re.search(r"\bshow( me)?\b[^.?!\n]{0,20}\b(secret keys?|service[ _-]?role( key)?|\.env( file)?|my environment)\b", low)
+        or re.search(r"\bprintenv\b|\b(cat|print|show|open)\b[^.?!\n]{0,10}\.env\b", low)):
+    print(json.dumps({
+        "decision": "block",
+        "reason": "Command guard: I stopped that. Printing the environment could show secret keys. "
+                  "To check a setting, open Vercel → your project → Settings → Environment Variables yourself.",
+    }))
+    sys.exit(0)
 notes = []
 if re.search(r"\b(explain|teach me|teach|eli5|plain english|what does (that|this) mean|i don.?t understand)\b", low) and len(low) < 400:
     notes.append("The Owner asked for an explanation. Use the sf-explain skill (.claude/skills/sf-explain/SKILL.md).")
