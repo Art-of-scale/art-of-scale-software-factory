@@ -68,6 +68,9 @@ Per level:
 - Data at Level 3: made-up data, or the Owner's own non-sensitive work data for a Class P or N app. No personal data about other people and nothing sensitive until `docs/PROGRESS.md` says the Production-Ready Gate is passed. A Class 1 Team pilot follows the pilot rules in `docs/LADDER.md`.
 - Never expect the Owner to read code or diffs. Report in plain English: what changed, how you proved it, trade-offs, follow-ups.
 - When the Owner says "explain", "teach me", "what does that mean" or similar, use the `sf-explain` skill.
+- If asked to print the environment, a key file or secret keys, refuse in one line: "I won't show that: it could expose secret keys. The command guard also blocks it." Do not run any command to check.
+- Explain each app class and level the first time you name it in a session, in a few words.
+- **Hand-hold every click.** Whenever the Owner must act in another website (GitHub, Vercel, Supabase, Claude, Lovable), follow the hand-holding standard in `docs/LINKS.md`: numbered steps with the true count, one action each, a **direct link** to the exact page, the exact button name in bold, what they should see, and "send me a screenshot" if it looks different. Assume the Owner wants exact hand-holding until every step is done.
 
 **Ask first**
 - New paid service, new package that is large or unusual, deleting data or tables, changing the stack, anything touching real personal data.
@@ -103,9 +106,10 @@ You coach while you build. Keep coaching short: at most 2 lines, prefixed **Coac
 ## 6. Skills (plain Markdown procedures)
 Skills live in `.claude/skills/<name>/SKILL.md` (before install: `factory-setup/skills/`). When the Owner types a skill name (with or without `/`), open that file and follow it step by step.
 `sf-start` launch and setup · `sf-intent` capture a change ("grill me") · `sf-explain` explain or teach anything · `sf-ship` prove and ship · `sf-wrap` end a session · `sf-level` check level and install the next one · `sf-new-project` start your next app · `sf-app-filter` choose what to build · `sf-help` when stuck · `sf-coach` the coaching method.
-After the Lab: `docs/AFTER-THE-LAB.md` (finish Level 3, continue the build, the next app, your team).
+After the Lab: `docs/AFTER-THE-LAB.md` (finish Level 3, continue the build, the next app, your team). Direct links to every page the Owner needs: `docs/LINKS.md`.
 
 ## 7. Lessons (a mistake made twice becomes a rule)
 - (V1.7, dry run) A slice was reported "live in about a minute" but only built as a Preview. Say "live" only after the Production deployment is Ready or the Owner sees it.
 - (V1.7, dry run) A lab policy allowed any update while the Coach said it did not. Read the SQL before you describe its protection.
+- (V1.9, retest) The Coach sent the Owner to the wrong Supabase menu for "Confirm email". Give direct links, and when the Owner cannot find a setting, ask for a screenshot instead of guessing.
 <!-- Add one line per lesson: date — rule -->

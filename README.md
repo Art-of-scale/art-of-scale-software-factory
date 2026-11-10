@@ -12,10 +12,13 @@ For founders and leaders who don't write code. Part of the Art of Scale Factory 
 [Load my Art of Scale Software Factory (text link)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FArt-of-scale%2Fart-of-scale-software-factory&project-name=my-software-factory&repository-name=my-software-factory&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22supabase%22%2C%22productSlug%22%3A%22supabase%22%7D%5D)
 
 1. In the new tab, sign in to Vercel **with GitHub**. If Vercel says you already have an account with this email: sign in the way you did before (for example Google), then Account Settings → Authentication → **Connect GitHub**, and click the Load button again.
+   - **First time on Vercel?** If you see "404 Not Found / Select Team", go back to the GitHub tab and click the Load link once more: the second click works.
+   - **Git Scope empty?** Click **Add GitHub Scope** → **Install** the Vercel GitHub App. Choose **All repositories** here (your new repo does not exist yet); you can narrow it later in GitHub → Settings → Applications.
+   - **"Authorize Vercel" button greyed out?** Wait 5 seconds; it turns on.
 2. Choose **GitHub** as the Git provider. Keep the repo **private**. If GitHub asks to install Vercel, allow it (you can narrow it to this one repo later).
 3. When asked, add **Supabase** (a new project: made-up data, or your own non-sensitive work data). No credit card is needed.
 4. Click **Deploy**. Open your live link: the status board shows Code, Hosting, Database and Coach.
-5. Open **claude.ai/code** in your browser (it always runs in the cloud; nothing runs on your computer) → **Connect GitHub**. This takes two steps: **Authorise** the Claude GitHub App, then **Install** it. On the install screen choose **Only select repositories** → `my-software-factory`. Then pick the repo and paste:
+5. Open **claude.ai/code** in your browser (it always runs in the cloud; nothing runs on your computer) → **Connect GitHub**. This takes two steps: **Authorise** the Claude GitHub App, then **Install** it. On the install screen choose **Only select repositories** → `my-software-factory`. If claude.ai shows a **Fix** button instead, click it, and on the GitHub page still choose **Only select repositories** before you click Install. Then pick the repo and paste:
 
 > Start my software factory. Read CLAUDE.md, install the factory if it is not installed yet, then run the sf-start skill and guide me step by step.
 

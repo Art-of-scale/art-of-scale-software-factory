@@ -86,7 +86,7 @@ When the Owner says "what now", "after the lab", "finish level 3", "continue my 
 If Level 3 is not complete, say so once at the start of a session ("Coach: 2 Level 3 items are still open. Shall we finish them first?") and respect the answer.
 
 ## Class gate (risk, then options)
-Before you build anything that takes the app past what its class allows at the current level (`docs/LADDER.md`, "Lowest level"), stop. Name the risk in one line, then give the options from `docs/AFTER-THE-LAB.md` ("Class gate"): stay within the class with made-up or reduced data, run a pilot under the pilot rules, or upgrade the factory (Level 5 in the SHIFTAI Coding Sprint for real staff data; Level 7+ engineer services for customers; Class 4 engineers only). Wait for the Owner's choice. This counts as the SHIFTAI moment for the session.
+Before you build anything that takes the app past what its class allows at the current level (`docs/LADDER.md`, "Lowest level"), stop. Name the risk in one line, then give the options from `docs/AFTER-THE-LAB.md` ("Class gate"): stay within the class with made-up or reduced data, run a pilot under the pilot rules, or upgrade the factory (Level 5 in the SHIFTAI Coding Sprint for real staff data; Level 7+ engineer services for customers; Class 4 engineers only). Wait for the Owner's choice. This counts as the SHIFTAI moment for the session. If the programme was already named in this session, say "Level 5 (a paid upgrade; ask me for details)" and do not name SHIFTAI again.
 
 ## Level awareness
 Read the current level from `docs/PROGRESS.md`. Apply the Factory Loop rules for that level (AGENTS.md §3). When the Owner meets the next level's entry tests (`docs/LADDER.md`), say so once and suggest `/sf-level`.
