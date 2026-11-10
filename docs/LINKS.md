@@ -1,4 +1,4 @@
-# Direct links and hand-holding standard (V1.9, checked 10 Nov 2026)
+# Direct links and hand-holding standard (V2.2, checked 10 Nov 2026)
 
 The Owner is not technical. Every instruction that sends them to another website follows this standard.
 
@@ -11,6 +11,8 @@ The Owner is not technical. Every instruction that sends them to another website
 6. **Wait** for the Owner to say "done" (or paste the result) before the next step.
 7. **Fill in the Owner's own names**: replace `<team>`, `<project>` and `<owner>` with their real values. Ask once for the address in their browser bar (it is not a secret) and reuse it.
 8. **Never ask for a secret.** Links lead to pages; the Owner types secrets only into the service itself.
+9. **Say first where they should land.** Before each step, describe the page they will see when they are in the right place (its title and one thing on it), and show a picture if one exists (`docs/img/`).
+10. **Everyday browser.** Ask the Owner to open links in the browser where they already signed in (Chrome, Edge or Safari), not a browser inside another app: right-click → **Copy link** → paste into the address bar. A new browser knows none of their logins and adds two-factor checks.
 
 ## Direct links
 `_` in a Supabase link means "your project": Supabase asks which project if you have more than one. Pages marked *pattern* follow a stable URL pattern, but the vendor docs do not list them; if one fails, give the menu path and ask for a screenshot.
@@ -19,7 +21,8 @@ The Owner is not technical. Every instruction that sends them to another website
 | Page | Link |
 |---|---|
 | Sign up | https://github.com/signup |
-| The Art of Scale template (Load button) | https://github.com/Art-of-scale/art-of-scale-software-factory |
+| **Load my factory (direct; use this, not the GitHub page)** | https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FArt-of-scale%2Fart-of-scale-software-factory&project-name=my-software-factory&repository-name=my-software-factory&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22supabase%22%2C%22productSlug%22%3A%22supabase%22%7D%5D |
+| The Art of Scale template page on GitHub | https://github.com/Art-of-scale/art-of-scale-software-factory |
 | Create a new empty repo (zip route) | https://github.com/new |
 | Apps installed on your account (Claude, Vercel): narrow to one repo | https://github.com/settings/installations |
 | Apps you authorised (revoke) | https://github.com/settings/applications |
